@@ -18,11 +18,13 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = .white
 
         collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+
+        (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 100
     }
 
 

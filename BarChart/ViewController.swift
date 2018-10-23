@@ -17,12 +17,12 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
         collectionView?.backgroundColor = .white
 
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(BarCell.self, forCellWithReuseIdentifier: cellId)
 
         (collectionView?.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
     }
 
-
+// Scroll Horizontal
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
@@ -32,7 +32,7 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
 
-        cell.backgroundColor = .blue
+//        cell.backgroundColor = .blue
         return cell
     }
 

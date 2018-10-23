@@ -8,13 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UICollectionViewController {
+
+    let cellId = "cellId"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        collectionView?.backgroundColor = .white
+
+        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
     }
 
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+
+        cell.backgroundColor = .blue
+        return cell
+    }
 
 }
 

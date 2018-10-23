@@ -49,25 +49,25 @@ class ViewController: UICollectionViewController, UICollectionViewDelegateFlowLa
             cell.barHeightConstraint?.constant = maxHeight() * ratio
         }
 
-//        cell.barHeightConstraint?.constant = values[indexPath.item]
-
-//        cell.backgroundColor = .blue
 
         return cell
     }
 
 
-    func collectionview(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 30, height: maxHeight())
-    }
+
+//    func collectionview(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 30, height: maxHeight())
+//    }
+//
+//
+////    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+////        return UIEdgeInsets(top: 0 , left: 4, bottom: 0, right: 4)
+//    }
 
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0 , left: 4, bottom: 0, right: 4)
-    }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 30, height: view.frame.height - 20 - 44 - 8 )
+        return CGSize(width: 30, height: maxHeight())
     }
 
 }
